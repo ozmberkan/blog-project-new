@@ -17,18 +17,12 @@ const Filter = () => {
           className="p-4 bg-zinc-800 border border-zinc-700 rounded-md mt-5 flex justify-start flex-col gap-y-2.5"
         >
           <MenuItem>
-            <a
-              className="flex justify-start items-center data-[focus]:bg-zinc-600 text-white px-5 rounded-md py-2"
-              href="/settings"
-            >
+            <a className="flex justify-start items-center data-[focus]:bg-zinc-600 text-white px-5 rounded-md py-2 cursor-pointer">
               Kategoriye Göre
             </a>
           </MenuItem>
           <MenuItem>
-            <a
-              className="flex justify-start items-center data-[focus]:bg-zinc-600 text-white  px-5 rounded-md py-2"
-              href="/support"
-            >
+            <a className="flex justify-start items-center data-[focus]:bg-zinc-600 text-white  px-5 rounded-md py-2 cursor-pointer">
               Tarihe Göre
             </a>
           </MenuItem>
