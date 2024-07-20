@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="py-4 px-80 bg-[#0F0F10] dark:bg-[#fff] dark:border-zinc-300 flex items-center justify-between border-b border-zinc-700 w-full ">
+    <div className="py-4 px-80 bg-[#0F0F10] transition-all duration-500 dark:bg-[#fff] dark:border-zinc-300 flex items-center justify-between border-b border-zinc-700 w-full ">
       <div>
         <div className="font-lato cursor-pointer text-3xl font-semibold text-[#d4d2d2] dark:text-[#141414] flex items-center justify-center gap-x-2">
           <BsCardList size={30} />
@@ -39,7 +39,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Blog Ara..."
-            className="border bg-black dark:bg-transparent dark:focus:ring-offset-white dark:focus:ring-2 py-3 px-5 placeholder:text-zinc-600 text-[#d4d2d2] font-lato rounded-full min-w-[300px] border-zinc-700 outline-none transition-all pr-12 duration-500  focus:ring-2 ring-zinc-800 ring-offset-[#0f0f10] ring-offset-2 "
+            className="border bg-black  dark:bg-transparent dark:focus:ring-offset-white dark:focus:ring-2 py-3 px-5 placeholder:text-zinc-600 text-[#d4d2d2] font-lato rounded-full min-w-[300px] border-zinc-700 outline-none transition-all pr-12 duration-500  focus:ring-2 ring-zinc-800 ring-offset-[#0f0f10] ring-offset-2 "
           />
         </div>
         <div
