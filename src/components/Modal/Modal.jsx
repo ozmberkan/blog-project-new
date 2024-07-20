@@ -29,7 +29,7 @@ function Modal({ setIsShowModal }) {
         </div>
         <div className="py-4 grid grid-cols-2 gap-3">
           <div className="flex flex-col gap-y-2 font-lato">
-            <label className="font-semibold">Text</label>
+            <label className="font-semibold text-zinc-500 dark:text-zinc-700">Text</label>
             <input
               type="text"
               className="p-3 w-full rounded-md border bg-transparent dark:border-zinc-600 border-zinc-700  placeholder:text-zinc-500"
@@ -37,7 +37,7 @@ function Modal({ setIsShowModal }) {
             />
           </div>
           <div className="flex flex-col gap-y-2 font-lato">
-            <label className="font-semibold">Text</label>
+            <label className="font-semibold text-zinc-500 dark:text-zinc-700">Text</label>
             <input
               type="text"
               className="p-3 w-full rounded-md border bg-transparent dark:border-zinc-600 border-zinc-700  placeholder:text-zinc-500"
@@ -45,7 +45,7 @@ function Modal({ setIsShowModal }) {
             />
           </div>
           <div className="col-span-2 row-span-3 gap-y-2 flex flex-col font-lato">
-            <label className="font-semibold">Text</label>
+            <label className="font-semibold text-zinc-500 dark:text-zinc-700">Text</label>
             <textarea
               type="text"
               className="p-3 w-full min-w-[200px] min-h-[200px] bg-transparent max-h-[200px] dark:border-zinc-600 border-zinc-700 rounded-md border  placeholder:text-zinc-500"
@@ -53,7 +53,7 @@ function Modal({ setIsShowModal }) {
             />
           </div>
           <div className="flex flex-col gap-y-2 font-lato">
-            <label className="font-semibold">Text</label>
+            <label className="font-semibold text-zinc-500 dark:text-zinc-700">Text</label>
             <input
               type="text"
               className="p-3 w-full rounded-md border bg-transparent dark:border-zinc-600 border-zinc-700  placeholder:text-zinc-500"
