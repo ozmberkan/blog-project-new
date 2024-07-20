@@ -50,7 +50,7 @@ const Navbar = () => {
             {isLightMode ? <HiMoon size={26} /> : <HiSun size={26} />}
           </div>
         </div>
-        <div className="py-3 hover:bg-zinc-700 px-5 cursor-pointer text-[#d4d2d2]  group transition-all duration-500 bg-zinc-800 rounded-md  flex">
+        <div className="py-3 hover:bg-zinc-800 px-5 cursor-pointer text-[#d4d2d2]  group transition-all duration-500 bg-zinc-900 rounded-md  flex">
           <div className="flex items-center justify-center gap-x-2">
             <HiViewGridAdd size={26} />
             <span className="font-lato font-semibold ">Ekle</span>
