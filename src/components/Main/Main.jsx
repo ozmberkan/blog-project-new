@@ -4,7 +4,7 @@ import BlogList from "../BlogList/BlogList";
 
 const Main = () => {
   return (
-    <div className="w-full bg-[#0F0F10] py-5 px-80">
+    <div className="w-full bg-[#0F0F10] dark:bg-[#fdfdfd] transition-all duration-500 py-5 px-80">
       <Filter />
       <BlogList />
     </div>
