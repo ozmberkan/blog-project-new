@@ -42,7 +42,7 @@ const Navbar = () => {
             </label>
             <input
               type="text"
-              placeholder="Blog Ara..."
+              placeholder="Blog & Yazar & Tarih Ara..."
               className="border bg-black  dark:bg-transparent dark:focus:ring-offset-white dark:focus:ring-2 py-3 px-5 placeholder:text-zinc-600 text-[#d4d2d2] font-lato rounded-full min-w-[300px] border-zinc-700 outline-none transition-all pr-12 duration-500  focus:ring-2 ring-zinc-800 ring-offset-[#0f0f10] ring-offset-2 "
             />
           </div>
