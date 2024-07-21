@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Main from "./components/Main/Main";
 import Navbar from "./components/Navbar/Navbar";
-import { blogData } from "~/data/blogData";
 import FlexContainer from "./containers/FlexContainer";
+import { blogData } from "~/data/blogData";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
