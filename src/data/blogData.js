@@ -48,3 +48,20 @@ export const blogData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut, ducimus culpa impedit deleniti odit eius esse molestias commodi eligendi. Placeat hic unde.",
   },
 ];
+
+
+export const categories = [
+   {
+    category: "Blogs"
+  },
+  {
+    category : "Technology"
+  },
+  {
+    category : "School"
+  },
+  {
+    category: "Programming"
+  },
+ 
+]

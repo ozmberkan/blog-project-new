@@ -1,23 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { FaSortAmountDownAlt } from "react-icons/fa";
 
-const Filter = () => {
+const Filter = (props) => {
+  const { selectedCategory, setSelectedCategory, categories } = props;
   return (
     <div className="w-full h-20 text-white flex justify-between items-center relative">
       <div className="w-full flex justify-start items-center gap-x-3 font-lato font-bold transition-all duration-500">
-        <button className="px-4 py-2 bg-zinc-100 rounded-md text-zinc-900 dark:bg-zinc-900 dark:text-[#f1f1f1] hover:bg-zinc-200 dark:hover:bg-zinc-700">
+        <button
+          onClick={() => setSelectedCategory("All")}
+          className={`px-4 py-2 bg-zinc-100 rounded-md text-zinc-900 dark:bg-zinc-900 dark:text-[#f1f1f1] hover:bg-zinc-800 dark:hover:bg-zinc-700 ${
+            selectedCategory === "All"
+              ? "bg-[#f1f1f1]"
+              : "bg-zinc-900 text-[#f1f1f1]"
+          }`}
+        >
           All
         </button>
-        <button className="px-4 py-2 bg-[#18181B] rounded-md dark:bg-[#F1F1F1] dark:text-[#141414] hover:bg-zinc-800 dark:hover:bg-zinc-100">
-          Technology
-        </button>
-        <button className="px-4 py-2 bg-[#18181B] rounded-md dark:bg-[#F1F1F1] dark:text-[#141414] hover:bg-zinc-800 dark:hover:bg-zinc-100">
-          School
-        </button>
-        <button className="px-4 py-2 bg-[#18181B] rounded-md dark:bg-[#F1F1F1] dark:text-[#141414] hover:bg-zinc-800 dark:hover:bg-zinc-100">
-          Blogs
-        </button>
+        {categories.map((button, key) => (
+          <button
+            key={key}
+            onClick={() => setSelectedCategory(button.category)}
+            className={`   px-4 py-2 bg-[#18181B] rounded-md dark:bg-[#F1F1F1] dark:text-[#141414] hover:bg-zinc-800 dark:hover:bg-zinc-100 ${
+              selectedCategory == button.category
+                ? "bg-[#F1F1F1] text-[#141414]"
+                : ""
+            }`}
+          >
+            {button.category}
+          </button>
+        ))}
       </div>
       <Menu>
         <MenuButton className="py-3 hover:bg-zinc-800 px-5 cursor-pointer text-[#d4d2d2] dark:text-[#141414] dark:bg-[#f1f1f1] group transition-all duration-500 bg-zinc-900 rounded-md flex">
