@@ -9,8 +9,10 @@ const Filter = (props) => {
       <div className="w-full flex justify-start items-center gap-x-3 font-lato font-bold transition-all duration-500">
         <button
           onClick={() => setSelectedCategory("All")}
-          className={`px-4 py-2 bg-zinc-100 rounded-md text-zinc-900 dark:bg-zinc-900 dark:text-[#f1f1f1] hover:bg-zinc-800 dark:hover:bg-zinc-700 ${
-            selectedCategory === "All" ? "text-red-500" : ""
+          className={`px-4 py-2 rounded-md bg-[#fff] text-[#141414]  dark:bg-[#000] dark:text-[#fff] ${
+            selectedCategory === "All"
+              ? "bg-[#fff] text-[#141414] dark:bg-[#000] dark:text-[#fff]"
+              : "bg-[#141414] text-[#fff] dark:bg-[#e9e9e9] dark:text-[#0c0c0c]"
           }`}
         >
           All
@@ -19,8 +21,10 @@ const Filter = (props) => {
           <button
             key={key}
             onClick={() => setSelectedCategory(button.category)}
-            className={`   px-4 py-2 bg-[#18181B] rounded-md dark:bg-[#F1F1F1] dark:text-[#141414] hover:bg-zinc-800 dark:hover:bg-zinc-100 ${
-              selectedCategory == button.category ? "text-red-500" : ""
+            className={`   px-4 py-2 bg-[#18181B] rounded-md dark:bg-[#F1F1F1] dark:text-[#141414]  ${
+              selectedCategory == button.category
+                ? "dark:bg-[#000] dark:text-white bg-white text-black hover:opacity-"
+                : ""
             }`}
           >
             {button.category}

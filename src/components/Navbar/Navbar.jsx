@@ -3,7 +3,7 @@ import { HiMoon, HiSearch, HiSun, HiViewGridAdd } from "react-icons/hi";
 import { BsCardList } from "react-icons/bs";
 import Modal from "../Modal/Modal";
 
-const Navbar = ({ search, setSearch }) => {
+const Navbar = ({ search, setSearch, setData, data }) => {
   const [isLightMode, setIsLightMode] = useState(
     localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
@@ -70,7 +70,9 @@ const Navbar = ({ search, setSearch }) => {
           </div>
         </div>
       </div>
-      {isShowModal && <Modal setIsShowModal={setIsShowModal} />}
+      {isShowModal && (
+        <Modal data={data} setData={setData} setIsShowModal={setIsShowModal} />
+      )}
     </Fragment>
   );
 };

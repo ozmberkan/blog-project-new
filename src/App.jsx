@@ -11,7 +11,12 @@ const App = () => {
 
   return (
     <FlexContainer>
-      <Navbar search={search} setSearch={setSearch} />
+      <Navbar
+        search={search}
+        setSearch={setSearch}
+        setData={setData}
+        data={data}
+      />
       <Main
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
