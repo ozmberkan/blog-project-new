@@ -4,7 +4,6 @@ import { GrFormClose } from "react-icons/gr";
 import { MdFormatListBulletedAdd } from "react-icons/md";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 function Modal({ setIsShowModal, setData, data }) {
   const [newBlog, setNewBlog] = useState({
@@ -43,7 +42,6 @@ function Modal({ setIsShowModal, setData, data }) {
 
   return createPortal(
     <>
-      <ToastContainer autoClose={1000} />
       <div className="fixed inset-0 flex items-center justify-center z-50">
         <div className="bg-zinc-950 border-2 border-zinc-800 dark:border-zinc-400 dark:bg-[#fff]  rounded-2xl shadow-lg p-6 max-w-2xl w-full relative z-50">
           <div className="flex w-full gap-y-2 flex-col mb-5">

@@ -3,6 +3,8 @@ import Main from "./components/Main/Main";
 import Navbar from "./components/Navbar/Navbar";
 import FlexContainer from "./containers/FlexContainer";
 import { blogData } from "~/data/blogData";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -11,6 +13,7 @@ const App = () => {
 
   return (
     <FlexContainer>
+      <ToastContainer autoClose={1000} />
       <Navbar
         search={search}
         setSearch={setSearch}
@@ -22,6 +25,7 @@ const App = () => {
         setSelectedCategory={setSelectedCategory}
         data={data}
         search={search}
+        setData={setData}
       />
     </FlexContainer>
   );

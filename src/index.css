@@ -3,5 +3,37 @@
 @tailwind utilities;
 
 body {
-    @apply bg-[#0F0F10] dark:bg-[#fdfdfd]
+    @apply bg-[#0F0F10] dark:bg-[#fdfdfd] scroll-smooth
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c1c1c;
+  border: 62px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #2b2b2b;
+  border: 51px none #ffffff;
+}
+::-webkit-scrollbar-track:hover {
+  background: #383838;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
