@@ -30,6 +30,7 @@ function Modal({ setIsShowModal, setData, data }) {
     e.preventDefault();
     const updatedBlog = [...data, { ...newBlog, id: data.length + 1 }];
     setData(updatedBlog);
+    setIsShowModal(false);
   };
 
   console.log(data);
