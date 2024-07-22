@@ -1,9 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { FaSortAmountDownAlt } from "react-icons/fa";
 
 const Filter = (props) => {
-  const { selectedCategory, setSelectedCategory, categories } = props;
+  const {
+    selectedCategory,
+    setSelectedCategory,
+    categories,
+    setSortBy,
+    sortBy,
+  } = props;
+
+  const handleSortChange = (sortOption) => {
+    setSortBy(sortOption); // Communicate selected sorting option back to Main component
+  };
+
   return (
     <div className="w-full h-20 text-white flex justify-between items-center relative">
       <div className="w-full flex justify-start items-center gap-x-3 font-lato font-bold transition-all duration-500">
@@ -44,12 +55,18 @@ const Filter = (props) => {
           className="relative p-4 bg-zinc-900 dark:bg-[#eee] dark:border-zinc-300 dark:text-[#141414] border border-zinc-800 rounded-md mt-2 flex justify-start flex-col gap-y-2.5"
         >
           <MenuItem>
-            <a className="flex justify-start items-center dark:text-[#141414] dark:hover:bg-[#dddddd] hover:bg-zinc-800 transition-colors duration-100 text-white px-5 rounded-md py-2 cursor-pointer">
-              Kategoriye Göre
+            <a
+              onClick={() => handleSortChange("title")}
+              className="flex justify-start items-center dark:text-[#141414] dark:hover:bg-[#dddddd] hover:bg-zinc-800 transition-colors duration-100 text-white px-5 rounded-md py-2 cursor-pointer"
+            >
+              Başlığa Göre
             </a>
           </MenuItem>
           <MenuItem>
-            <a className="flex justify-start items-center dark:text-[#141414] dark:hover:bg-[#dddddd] hover:bg-zinc-800 transition-colors duration-100 text-white px-5 rounded-md py-2 cursor-pointer">
+            <a
+              onClick={() => handleSortChange("date")}
+              className="flex justify-start items-center dark:text-[#141414] dark:hover:bg-[#dddddd] hover:bg-zinc-800 transition-colors duration-100 text-white px-5 rounded-md py-2 cursor-pointer"
+            >
               Tarihe Göre
             </a>
           </MenuItem>
