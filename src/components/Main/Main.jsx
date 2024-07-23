@@ -3,13 +3,9 @@ import Filter from "../Filter/Filter";
 import BlogList from "../BlogList/BlogList";
 import { categories } from "~/data/blogData";
 
-const Main = ({
-  selectedCategory,
-  setSelectedCategory,
-  data,
-  setData,
-  search,
-}) => {
+const Main = (props) => {
+  const { selectedCategory, setSelectedCategory, data, setData, search } =
+    props;
   const [sortBy, setSortBy] = useState("title");
 
   return (

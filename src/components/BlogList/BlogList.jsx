@@ -2,10 +2,10 @@ import React from "react";
 import BlogItem from "../BlogItem/BlogItem";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
-const BlogList = ({ data, sortBy, selectedCategory, search, setData }) => {
+const BlogList = (props) => {
+  const { data, sortBy, selectedCategory, search, setData } = props;
   const [animationParent] = useAutoAnimate();
 
-  // Filter and sort data based on selectedCategory, search, and sortBy
   const filteredAndSortedData = data
     .filter((item) => {
       const matchesCategory =
@@ -33,7 +33,7 @@ const BlogList = ({ data, sortBy, selectedCategory, search, setData }) => {
         ))
       ) : (
         <span className="bg-red-500 py-2 px-3 rounded-md text-red-200 dark:text-red-500 dark:bg-red-200 font-lato text-sm">
-          Veritabanında herhangi bir blog bulunmamaktadır!
+          Veritabanında blog bulunamadı, Lütfen kontrolleri sağlayınız.
         </span>
       )}
     </div>

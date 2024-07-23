@@ -1,16 +1,16 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { HiMoon, HiSearch, HiSun, HiViewGridAdd } from "react-icons/hi";
 import { BsCardList } from "react-icons/bs";
-import Modal from "../Modal/Modal";
+import Modal from "../../UI/Modal/Modal";
 
-const Navbar = ({ search, setSearch, setData, data }) => {
+const Navbar = (props) => {
+  const { search, setSearch, setData, data } = props;
+  const [isShowModal, setIsShowModal] = useState(false);
   const [isLightMode, setIsLightMode] = useState(
     localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
   );
-  const [isShowModal, setIsShowModal] = useState(false);
-
   useEffect(() => {
     if (isLightMode) {
       document.documentElement.classList.add("dark");
@@ -20,14 +20,6 @@ const Navbar = ({ search, setSearch, setData, data }) => {
       localStorage.theme = "light";
     }
   }, [isLightMode]);
-
-  const handleLightMode = () => {
-    setIsLightMode(!isLightMode);
-  };
-
-  const handleSearchChange = (e) => {
-    setSearch(e.target.value);
-  };
 
   return (
     <Fragment>
@@ -45,14 +37,14 @@ const Navbar = ({ search, setSearch, setData, data }) => {
             </label>
             <input
               type="text"
-              onChange={handleSearchChange}
+              onChange={(e) => setSearch(e.target.value)}
               value={search}
               placeholder="Blog & Yazar & Tarih Ara..."
               className="border bg-[#0F0F10] dark:bg-transparent dark:focus:ring-offset-white dark:focus:ring-2 py-3 px-5 placeholder:text-zinc-600 text-[#d4d2d2] font-lato rounded-full min-w-[300px] border-zinc-700 outline-none transition-all pr-12 duration-500 focus:ring-2 ring-zinc-800 ring-offset-[#0f0f10] ring-offset-2"
             />
           </div>
           <div
-            onClick={handleLightMode}
+            onClick={() => setIsLightMode(!isLightMode)}
             className="p-3 cursor-pointer text-[#d4d2d2] dark:text-[#141414] dark:hover:bg-[#f1f1f1] hover:bg-zinc-800 rounded-md transition-colors duration-500 flex"
           >
             <div className="flex items-center justify-center gap-x-2">
