@@ -3,14 +3,15 @@ import { HiMoon, HiSearch, HiSun, HiViewGridAdd } from "react-icons/hi";
 import { BsCardList } from "react-icons/bs";
 import Modal from "../../UI/Modal/Modal";
 
-const Navbar = (props) => {
-  const { search, setSearch, setData, data } = props;
+const Navbar = ({ search, setSearch, setData, data }) => {
   const [isShowModal, setIsShowModal] = useState(false);
+
   const [isLightMode, setIsLightMode] = useState(
     localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
   );
+
   useEffect(() => {
     if (isLightMode) {
       document.documentElement.classList.add("dark");
@@ -20,6 +21,7 @@ const Navbar = (props) => {
       localStorage.theme = "light";
     }
   }, [isLightMode]);
+
 
   return (
     <Fragment>

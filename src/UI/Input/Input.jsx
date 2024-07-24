@@ -1,8 +1,6 @@
 import React from "react";
 
-const Input = (props) => {
-  const { label, type, placeholder, name, handleChange, options } = props;
-
+const Input = ({ label, type, placeholder, name, handleChange, options }) => {
   return (
     <div className="flex flex-col gap-y-2 font-lato">
       <label className="font-semibold text-zinc-500 dark:text-zinc-700">

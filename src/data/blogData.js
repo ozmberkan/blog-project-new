@@ -132,7 +132,7 @@ export const EditInputField = [
    {
     label: "Yazar İsim-Soyisim",
     type: "text",
-     name: "authorName",
+    name: "authorName",
   },
   {
     label: "Yazar Görsel",

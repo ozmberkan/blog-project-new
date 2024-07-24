@@ -1,11 +1,9 @@
 import React from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { FaSortAmountDownAlt } from "react-icons/fa";
+import { categories } from "~/data/blogData";
 
-const Filter = (props) => {
-  const { selectedCategory, setSelectedCategory, categories, setSortBy } =
-    props;
-
+const Filter = ({ selectedCategory, setSelectedCategory, setSortBy }) => {
   const handleSortChange = (sortOption) => {
     setSortBy(sortOption);
   };

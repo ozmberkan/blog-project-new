@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import Filter from "../Filter/Filter";
 import BlogList from "../BlogList/BlogList";
-import { categories } from "~/data/blogData";
 
-const Main = (props) => {
-  const { selectedCategory, setSelectedCategory, data, setData, search } =
-    props;
+const Main = ({
+  selectedCategory,
+  setSelectedCategory,
+  data,
+  setData,
+  search,
+}) => {
   const [sortBy, setSortBy] = useState("title");
 
   return (
@@ -13,7 +16,6 @@ const Main = (props) => {
       <Filter
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
-        categories={categories}
         setSortBy={setSortBy}
         sortBy={sortBy}
       />

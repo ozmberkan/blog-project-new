@@ -5,6 +5,7 @@
 body {
     @apply bg-[#0F0F10] dark:bg-[#fdfdfd] scroll-smooth
 }
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

@@ -3,9 +3,9 @@ import { toast } from "react-toastify";
 import EditArea from "../EditArea/EditArea";
 import BlogArea from "../BlogArea/BlogArea";
 
-const BlogItem = (props) => {
-  const { blog, data, setData } = props;
-  const { blogImg, category, id, authorName, date, title, content } = blog;
+const BlogItem = ({ blog, data, setData }) => {
+  const { blogImg, category, id, authorName, authorImg, date, title, content } =
+    blog;
 
   const [editMode, setEditMode] = useState(false);
   const [editedBlog, setEditedBlog] = useState({
@@ -14,6 +14,7 @@ const BlogItem = (props) => {
     date,
     authorName,
     category,
+    authorImg,
   });
 
   const deleteBlog = (id) => {

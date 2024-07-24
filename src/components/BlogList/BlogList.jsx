@@ -2,14 +2,14 @@ import React from "react";
 import BlogItem from "../BlogItem/BlogItem";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
-const BlogList = (props) => {
-  const { data, sortBy, selectedCategory, search, setData } = props;
+const BlogList = ({ data, sortBy, selectedCategory, search, setData }) => {
   const [animationParent] = useAutoAnimate();
 
   const filteredAndSortedData = data
     .filter((item) => {
       const matchesCategory =
         selectedCategory === "All" || item.category === selectedCategory;
+
       const matchesSearch = `${item.title} ${item.authorName} ${item.date}`
         .toLowerCase()
         .includes(search.toLowerCase());
@@ -20,7 +20,7 @@ const BlogList = (props) => {
       if (sortBy === "title") {
         return a.title.localeCompare(b.title);
       } else if (sortBy === "date") {
-        return new Date(a.date) - new Date(b.date);
+        return new Date(b.date) - new Date(a.date);
       }
       return 0;
     });
@@ -32,7 +32,7 @@ const BlogList = (props) => {
           <BlogItem setData={setData} data={data} key={blog.id} blog={blog} />
         ))
       ) : (
-        <span className="bg-red-500 py-2 px-3 rounded-md text-red-200 dark:text-red-500 dark:bg-red-200 font-lato text-sm">
+        <span className="bg-red-500 p-4 rounded-md text-red-100 dark:text-red-500 dark:bg-red-200 font-lato text-base">
           Veritabanında blog bulunamadı, Lütfen kontrolleri sağlayınız.
         </span>
       )}

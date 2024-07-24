@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import { ToastContainer } from "react-toastify";
 import Main from "./components/Main/Main";
 import Navbar from "./components/Navbar/Navbar";
 import FlexContainer from "./containers/FlexContainer";
 import { blogData } from "~/data/blogData";
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -24,8 +24,8 @@ const App = () => {
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
         data={data}
-        search={search}
         setData={setData}
+        search={search}
       />
     </FlexContainer>
   );

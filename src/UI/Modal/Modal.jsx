@@ -5,8 +5,7 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import NewBlogInput from "~/components/AddNewBlogInput/NewBlogInput";
 
-function Modal(props) {
-  const { setIsShowModal, setData, data } = props;
+function Modal({ setIsShowModal, setData, data }) {
   const [newBlog, setNewBlog] = useState({
     category: "",
     blogImg: "",
@@ -22,7 +21,7 @@ function Modal(props) {
     setNewBlog({ ...newBlog, [name]: value });
   };
 
-  const isValid = Object.values(newBlog).some((x) => x === "");
+  const isValid = Object.values(newBlog).every((x) => x === "");
   const addNewBlog = (e) => {
     e.preventDefault();
     if (isValid) {
@@ -30,6 +29,7 @@ function Modal(props) {
     } else {
       const updatedBlog = [...data, { ...newBlog, id: data.length + 1 }];
       setData(updatedBlog);
+      setIsShowModal(false);
       toast.success("Blog Başarıyla Oluşturuldu");
     }
   };
