@@ -30,7 +30,8 @@ const BlogItem = (props) => {
     });
   };
 
-  const saveBlog = () => {
+  const saveBlog = (e) => {
+    e.preventDefault();
     const updatedData = data.map((item) =>
       item.id === id ? { ...item, ...editedBlog } : item
     );

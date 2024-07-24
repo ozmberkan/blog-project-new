@@ -26,7 +26,7 @@ const BlogList = (props) => {
     });
 
   return (
-    <div className="w-full flex flex-col gap-y-12" ref={animationParent}>
+    <div className="w-full flex flex-col gap-y-12 pb-12" ref={animationParent}>
       {filteredAndSortedData.length > 0 ? (
         filteredAndSortedData.map((blog) => (
           <BlogItem setData={setData} data={data} key={blog.id} blog={blog} />

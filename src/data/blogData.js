@@ -65,3 +65,84 @@ export const categories = [
   },
  
 ]
+
+
+  export const inputField = [
+  {
+    label: "Başlık",
+    type: "text",
+    placeholder: "Blog başlığını yazınız...",
+    name: "title",
+  },
+  {
+    label: "Kategori",
+    type: "select",
+    name: "category",
+    options: [
+      { value: "Blogs", label: "Blogs" },
+      { value: "Technology", label: "Technology" },
+      { value: "School", label: "School" },
+      { value: "Programming", label: "Programming" },
+    ],
+  },
+  {
+    label: "Blog Görsel",
+    type: "text",
+    name: "blogImg",
+    placeholder: "Blog Görsel Link Giriniz..."
+  },
+  {
+    label: "Yazar Görsel",
+    type: "text",
+    placeholder: "Linki yazınız..",
+    name: "authorImg",
+  },
+  {
+    label: "Yazar İsim Soyisim",
+    type: "text",
+    placeholder: "Yazar isim-soyisim giriniz...",
+    name: "authorName",
+  },
+  {
+    label: "Tarih",
+    type: "date",
+    name: "date",
+  },
+  {
+    label: "Blog Yazısı",
+    type: "textarea",
+    name: "content",
+    placeholder: "Blog Yazısı."
+  }
+];
+
+
+export const EditInputField = [
+  {
+    label: "Kategori",
+    type: "select",
+    name: "category",
+    options: [
+      { value: "Blogs", label: "Blogs" },
+      { value: "Technology", label: "Technology" },
+      { value: "School", label: "School" },
+      { value: "Programming", label: "Programming" },
+    ],
+  },
+   {
+    label: "Yazar İsim-Soyisim",
+    type: "text",
+     name: "authorName",
+  },
+  {
+    label: "Yazar Görsel",
+    type: "text",
+    name: "authorImg",
+  },
+  {
+    label: "Blog Yazısı",
+    type: "textarea",
+    name: "content",
+    placeholder: "Blog Yazısı..."
+  }
+];
