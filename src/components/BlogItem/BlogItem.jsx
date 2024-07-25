@@ -34,7 +34,7 @@ const BlogItem = ({ blog, data, setData }) => {
   const saveBlog = (e) => {
     e.preventDefault();
     const updatedData = data.map((item) =>
-      item.id === id ? { ...item, ...editedBlog } : item
+      item.id === id ? { ...item, ...editedBlog } : item 
     );
     setData(updatedData);
     setEditMode(false);

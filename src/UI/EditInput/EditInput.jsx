@@ -44,7 +44,7 @@ const EditInput = ({
           placeholder={placeholder}
           value={value}
           onChange={handleEditChange}
-          className="p-3 text-zinc-500 bg-transparent dark:border-zinc-600 border-zinc-700 rounded-md border placeholder:text-zinc-500"
+          className="p-3 text-zinc-500 bg-transparent dark:border-zinc-600 min-h-[100px] max-h-[150px] border-zinc-700 rounded-md border placeholder:text-zinc-500"
           maxLength={250}
         />
       ) : null}
