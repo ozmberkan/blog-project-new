@@ -11,6 +11,7 @@
 > **Projeye Başlangıç Tarihi** : 22.07.2024 <br>
 > **Projeye Bitiş Tarihi** : 25.07.2024 <br>
 > **Projede Kullanılan Teknolojiler** : React(Vite) & TailwindCSS <br>
+> **Responsive Tasarım** : Yakında
 > **Projede Kullanılan Paketler** : <br>
 > 🔴 react-icons <br>
 > 🔴 auto-animate <br>
