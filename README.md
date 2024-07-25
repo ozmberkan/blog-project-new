@@ -16,8 +16,7 @@
 > 🔴 react-icons <br>
 > 🔴 auto-animate <br>
 > 🔴 react-toastify <br>
-> 🔴 nanoid <br>
-> 🔴 TailwindCSS <br>
+> 🔴 tailwindCSS <br>
 > 🔴 tailwindcss-animated <br>
 > 🔴 headlessui <br>
 <br>
