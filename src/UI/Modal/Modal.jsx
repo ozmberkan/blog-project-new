@@ -21,7 +21,7 @@ function Modal({ setIsShowModal, setData, data }) {
     setNewBlog({ ...newBlog, [name]: value });
   };
 
-  const isValid = Object.values(newBlog).every((x) => x === "");
+  const isValid = Object.values(newBlog).some((x) => x === "");
   const addNewBlog = (e) => {
     e.preventDefault();
     if (isValid) {
