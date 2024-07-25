@@ -3,7 +3,7 @@
 <br>
 
 > [!TIP]
-> Bu projede oluşturulan blogları listeli bir biçimde görüntüleyebilir, yeni bir blog oluşturabilir, blog yazılarını filtreleyebilir, blog yazılarını silebilir ve daha fazlasını yapabilirsin!.
+> Bu projede oluşturulan blogları listeli bir biçimde görüntüleyebilir, yeni bir blog oluşturabilir, blog yazılarını filtreleyebilir, blog yazılarını yeniden güncelleyebilir, blog yazılarını silebilir ve daha fazlasını yapabilirsin!.
 
 <br>
 
