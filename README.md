@@ -32,7 +32,13 @@ npm install
 
 <br>
 
-> Görseller
+> Görseller & Video
+
+
+https://github.com/user-attachments/assets/3ee832d6-d625-421f-9855-a028676e3e96
+
+
+
 ![Screenshot_1](https://github.com/user-attachments/assets/7162fdfc-0d69-415b-b106-d7c6a4929082)
 > 
 ![Screenshot_2](https://github.com/user-attachments/assets/d6f84942-16d5-453a-a1a1-c184a1402bb3)
