@@ -47,6 +47,8 @@ const BlogList = ({
                 data={data}
                 key={blog.id}
                 blog={blog}
+                isTabletOrMobile={isTabletOrMobile}
+                isDesktopOrLaptop={isDesktopOrLaptop}
               />
             ))
           ) : (
