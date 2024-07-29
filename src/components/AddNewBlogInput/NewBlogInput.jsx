@@ -14,7 +14,6 @@ const NewBlogInput = ({ handleChange, addNewBlog }) => {
           placeholder={input.placeholder}
           name={input.name}
           handleChange={handleChange}
-          addNewBlog={addNewBlog}
           options={input.options}
         />
       ))}

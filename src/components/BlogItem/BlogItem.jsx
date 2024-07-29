@@ -3,7 +3,13 @@ import { toast } from "react-toastify";
 import EditArea from "../EditArea/EditArea";
 import BlogArea from "../BlogArea/BlogArea";
 
-const BlogItem = ({ blog, data, setData }) => {
+const BlogItem = ({
+  blog,
+  data,
+  setData,
+  isTabletOrMobile,
+  isDesktopOrLaptop,
+}) => {
   const { blogImg, category, id, authorName, authorImg, date, title, content } =
     blog;
 
@@ -34,7 +40,7 @@ const BlogItem = ({ blog, data, setData }) => {
   const saveBlog = (e) => {
     e.preventDefault();
     const updatedData = data.map((item) =>
-      item.id === id ? { ...item, ...editedBlog } : item 
+      item.id === id ? { ...item, ...editedBlog } : item
     );
     setData(updatedData);
     setEditMode(false);
@@ -44,19 +50,27 @@ const BlogItem = ({ blog, data, setData }) => {
   return (
     <>
       {editMode ? (
-        <EditArea
-          editedBlog={editedBlog}
-          handleEditChange={handleEditChange}
-          saveBlog={saveBlog}
-          blogImg={blogImg}
-          setEditMode={setEditMode}
-        />
+        <div className="p-4">
+          <EditArea
+            editedBlog={editedBlog}
+            handleEditChange={handleEditChange}
+            saveBlog={saveBlog}
+            blogImg={blogImg}
+            setEditMode={setEditMode}
+            isTabletOrMobile={isTabletOrMobile}
+            isDesktopOrLaptop={isDesktopOrLaptop}
+          />
+        </div>
       ) : (
-        <BlogArea
-          deleteBlog={deleteBlog}
-          blog={blog}
-          setEditMode={setEditMode}
-        />
+        <div className="p-4">
+          <BlogArea
+            deleteBlog={deleteBlog}
+            blog={blog}
+            setEditMode={setEditMode}
+            isTabletOrMobile={isTabletOrMobile}
+            isDesktopOrLaptop={isDesktopOrLaptop}
+          />
+        </div>
       )}
     </>
   );
