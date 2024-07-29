@@ -3,20 +3,20 @@
 <br>
 
 > [!TIP]
-> Bu projede oluşturulan blogları listeli bir biçimde görüntüleyebilir, yeni bir blog oluşturabilir, blog yazılarını filtreleyebilir, blog yazılarını silebilir ve daha fazlasını yapabilirsin!.
+> Bu projede oluşturulan blogları listeli bir biçimde görüntüleyebilir, yeni bir blog oluşturabilir, blog yazılarını filtreleyebilir, blog yazılarını yeniden güncelleyebilir, blog yazılarını silebilir ve daha fazlasını yapabilirsin!.
 
 <br>
 
 > [!IMPORTANT]
 > **Projeye Başlangıç Tarihi** : 22.07.2024 <br>
-> **Projeye Bitiş Tarihi** : 25.07.2024 <br>
+> **Proje Bitiş Tarihi** : 25.07.2024 <br>
 > **Projede Kullanılan Teknolojiler** : React(Vite) & TailwindCSS <br>
+> **Responsive Tasarım** : Yakında <br>
 > **Projede Kullanılan Paketler** : <br>
 > 🔴 react-icons <br>
 > 🔴 auto-animate <br>
 > 🔴 react-toastify <br>
-> 🔴 nanoid <br>
-> 🔴 TailwindCSS <br>
+> 🔴 tailwindCSS <br>
 > 🔴 tailwindcss-animated <br>
 > 🔴 headlessui <br>
 <br>
